@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="465.0" prefWidth="619.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.PartController">
+   <children>
+      <Label layoutX="39.0" layoutY="68.0" prefHeight="18.0" prefWidth="72.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="63.0" layoutY="150.0" text="ID" />
+      <Label layoutX="63.0" layoutY="185.0" text="Name" />
+      <Label layoutX="63.0" layoutY="227.0" text="Inv" />
+      <Label layoutX="64.0" layoutY="264.0" text="Price/Cost" />
+      <Label layoutX="63.0" layoutY="303.0" text="Max" />
+      <Label layoutX="63.0" layoutY="341.0" text="Macine ID" />
+      <RadioButton fx:id="addInhouseRad" layoutX="130.0" layoutY="69.0" mnemonicParsing="false" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="addPart" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="257.0" layoutY="69.0" mnemonicParsing="false" onAction="#onActionToAddOutsourcedPartScreen" text="Outsourced" toggleGroup="$addPart" />
+      <TextField disable="true" editable="false" layoutX="152.0" layoutY="146.0" promptText="Auto Gen - Disabled" />
+      <TextField fx:id="partNameITxt" layoutX="152.0" layoutY="181.0" />
+      <TextField fx:id="partInvITxt" layoutX="152.0" layoutY="223.0" />
+      <TextField fx:id="partPriceITxt" layoutX="152.0" layoutY="260.0" />
+      <TextField fx:id="partMaxITxt" layoutX="152.0" layoutY="299.0" />
+      <TextField fx:id="machineIDTxt" layoutX="152.0" layoutY="337.0" />
+      <Label layoutX="345.0" layoutY="303.0" text="Min" />
+      <TextField fx:id="partMinITxt" layoutX="389.0" layoutY="299.0" />
+      <Button layoutX="345.0" layoutY="394.0" mnemonicParsing="false" onAction="#onActionSavePart" text="Save" />
+      <Button layoutX="432.0" layoutY="394.0" mnemonicParsing="false" onAction="#onActionBackToMainScreen" text="Cancel" />
+   </children>
+</AnchorPane>

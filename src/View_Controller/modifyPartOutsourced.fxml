@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="465.0" prefWidth="619.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.PartController">
+    <children>
+        <Label layoutX="39.0" layoutY="68.0" prefHeight="20.0" prefWidth="84.0" text="Modify Part">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font></Label>
+        <Label layoutX="63.0" layoutY="150.0" text="ID" />
+        <Label layoutX="63.0" layoutY="185.0" text="Name" />
+        <Label layoutX="63.0" layoutY="227.0" text="Inv" />
+        <Label layoutX="64.0" layoutY="264.0" text="Price/Cost" />
+        <Label layoutX="63.0" layoutY="303.0" text="Max" />
+        <Label fx:id="companyNameModLabel" layoutX="63.0" layoutY="341.0" text="Company Name" />
+        <RadioButton layoutX="174.0" layoutY="69.0" mnemonicParsing="false" onAction="#OnActionToModPartInhouse" text="In-House">
+            <toggleGroup>
+                <ToggleGroup fx:id="addPart" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="outSourcedRadio" layoutX="303.0" layoutY="69.0" mnemonicParsing="false" onAction="#onActionToModPartOutsourced" selected="true" text="Outsourced" toggleGroup="$addPart" />
+        <TextField fx:id="modifyIDOTxt" disable="true" layoutX="152.0" layoutY="146.0" />
+        <TextField fx:id="modifyNameOTxt" layoutX="152.0" layoutY="181.0" />
+        <TextField fx:id="modifyInvOTxt" layoutX="152.0" layoutY="223.0" />
+        <TextField fx:id="modifyPriceOTxt" layoutX="152.0" layoutY="260.0" />
+        <TextField fx:id="modifyMaxOTxt" layoutX="152.0" layoutY="299.0" />
+        <TextField fx:id="modCompanyNameTxt" layoutX="152.0" layoutY="337.0" />
+        <Label layoutX="345.0" layoutY="303.0" text="Min" />
+        <TextField fx:id="modifyMinOTxt" layoutX="389.0" layoutY="299.0" />
+        <Button layoutX="345.0" layoutY="394.0" mnemonicParsing="false" onAction="#OnActionSaveModPartOutsourced" text="Save" />
+        <Button layoutX="432.0" layoutY="394.0" mnemonicParsing="false" onAction="#onActionBackToMainScreen" text="Cancel" />
+    </children>
+</AnchorPane>
